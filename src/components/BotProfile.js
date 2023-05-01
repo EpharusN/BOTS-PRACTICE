@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const BotProfile = ({ bot }) => {
   // Check if bot prop is defined before accessing its properties
@@ -6,9 +6,20 @@ const BotProfile = ({ bot }) => {
     return <div>No bot selected.</div>;
   }
 
+  useEffect(() => {
+    fetch("http://localhost:4000/bots")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <div>
-      <h2>{bot.name}</h2>
+      <div className="d-flex justify-content-between align-items-center">
+        <h2>{bot.name}</h2>
+      </div>
       <img src={bot.avatar_url} alt={`${bot.name} avatar`} />
       <p>Health: {bot.health}</p>
       <p>Damage: {bot.damage}</p>

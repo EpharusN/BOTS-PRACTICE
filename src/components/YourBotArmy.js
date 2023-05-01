@@ -19,8 +19,7 @@ function YourBotArmy({ enlistedBots, releaseBot, dischargeBot }) {
             className="btn btn-danger"
             onClick={() => handleDischargeBot(bot)}
           >
-            <i className="fa fa-trash"></i>
-            Discharge
+            <i className="fa fa-trash"></i>x
           </button>
         </div>
       </div>
@@ -29,7 +28,7 @@ function YourBotArmy({ enlistedBots, releaseBot, dischargeBot }) {
 
   return (
     <div>
-      <h3>Your Bot Army</h3>
+      <h3>The Bot Army</h3>
       <div className="card-deck">{botCards}</div>
     </div>
   );
