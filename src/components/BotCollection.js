@@ -28,7 +28,7 @@ function BotCollection({ bots, enlistBot }) {
   };
 
   return (
-    <div>
+    <div className="box">
       <h2>Bot Collection</h2>
       <input
         type="text"

@@ -3,6 +3,7 @@ import BotCollection from "./components/BotCollection";
 import BotProfile from "./components/BotProfile";
 import YourBotArmy from "./components/YourBotArmy";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
   const [enlistedBots, setEnlistedBots] = useState([]);
@@ -43,7 +44,6 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Bot Collection</h2>
       <BotCollection bots={enlistedBots} enlistBot={enlistBot} />
       {selectedBots.length > 0 && (
         <BotProfile
@@ -58,14 +58,16 @@ function App() {
         releaseBot={releaseBot}
         dischargeBot={dischargeBot}
       />
-      <div className="row">
+      <div className="column">
         <div className="col-12">
           <h2>Enlisted Bots</h2>
           <ul>
             {selectedBots.map((bot) => (
               <li key={bot.id}>
                 {bot.name}{" "}
-                <button onClick={() => releaseBot(bot)}>Release</button>
+                <button className="" onClick={() => releaseBot(bot)}>
+                  Release
+                </button>
               </li>
             ))}
           </ul>
