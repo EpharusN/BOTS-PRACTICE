@@ -28,7 +28,7 @@ function YourBotArmy({ enlistedBots, releaseBot, dischargeBot }) {
 
   return (
     <div>
-      <h3>The Bot Army</h3>
+      <h3>Bot Army</h3>
       <div className="card-deck">{botCards}</div>
     </div>
   );

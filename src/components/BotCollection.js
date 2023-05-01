@@ -29,7 +29,7 @@ function BotCollection({ bots, enlistBot }) {
 
   return (
     <div className="box">
-      <h2>Bot Collection</h2>
+      <h1>BOT ARMY BUILDER</h1>
       <input
         type="text"
         id="search"
